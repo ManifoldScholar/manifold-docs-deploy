@@ -28,6 +28,17 @@ namespace :deploy do
       end
     end
   end
+
+  desc 'Copy Jekyll favicon'
+  task :jekyll_copy_favicon do
+    on roles(:web), in: :sequence, wait: 5 do
+      within release_path  do
+        execute :cp, '_site/favicon.ico', '_site/docs/favicon.ico'
+      end
+    end
+  end
 end
 
 before 'deploy:publishing', 'deploy:jekyll_build'
+
+after 'deploy:publishing', 'deploy:jekyll_copy_favicon'
