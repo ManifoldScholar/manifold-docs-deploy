@@ -13,6 +13,21 @@ set :keep_releases, 5
 set :rbenv_type, :user
 set :rbenv_ruby, '2.4.0'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :bundle_gemfile, -> { release_path.join('Gemfile') }
 
 # Yarn
 set :yarn_flags, "--production"
+
+namespace :deploy do
+
+  desc 'Jekyll Build'
+  task :jekyll_build do
+    on roles(:web), in: :sequence, wait: 5 do
+      within release_path  do
+        execute :bundle, :exec, :jekyll, :build
+      end
+    end
+  end
+end
+
+before 'deploy:publishing', 'deploy:jekyll_build'
