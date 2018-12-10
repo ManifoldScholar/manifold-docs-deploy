@@ -1,5 +1,5 @@
 <div align="right">
-    <a href="https://travis-ci.org/ManifoldScholar/manifold"><img src="https://travis-ci.org/ManifoldScholar/manifold.svg?branch=master" /></a> 
+    <a href="https://travis-ci.org/ManifoldScholar/manifold"><img src="https://travis-ci.org/ManifoldScholar/manifold.svg?branch=master" /></a>
 </div>
 <div align="center">
     <img src="https://storage.googleapis.com/manifold-assets/readme-art.gif" width="400" /><br />
@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-    Manifold is an intuitive, collaborative platform for scholarly publishing. With iterative texts, powerful annotation tools, rich media support, and robust community dialogue, Manifold transforms scholarly publications into living digital works. 
+    Manifold is an intuitive, collaborative platform for scholarly publishing. With iterative texts, powerful annotation tools, rich media support, and robust community dialogue, Manifold transforms scholarly publications into living digital works.
 </p>
 
 <p align="center">
@@ -26,4 +26,4 @@
 
 ## manifold-docs-deploy
 
-Handles the deployment of [Manifold Documentation](https://github.com/ManifoldScholar/manifold-docs-jekyll)
+Handles the deployment of [Manifold Documentation](https://github.com/ManifoldScholar/manifold-docs)
