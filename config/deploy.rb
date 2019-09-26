@@ -3,7 +3,7 @@ lock "~> 3.10.1"
 
 append :linked_dirs, '.bundle'
 
-set :repo_url, "git@github.com:ManifoldScholar/manifold-docs.git"
+set :repo_url, "https://github.com/ManifoldScholar/manifold-docs-deploy.git"
 set :deploy_to, "/home/manifold_marketing/deploy-docs"
 
 set :keep_releases, 5
