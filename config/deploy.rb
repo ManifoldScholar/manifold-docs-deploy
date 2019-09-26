@@ -24,7 +24,7 @@ namespace :deploy do
   task :jekyll_build do
     on roles(:web), in: :sequence, wait: 5 do
       within release_path  do
-        execute :bundle, :exec, :jekyll, :build
+        execute "bin/jekyll", :build
       end
     end
   end
