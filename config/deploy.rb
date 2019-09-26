@@ -3,7 +3,7 @@ lock "~> 3.10.1"
 
 append :linked_dirs, '.bundle'
 
-set :repo_url, "https://github.com/ManifoldScholar/manifold-docs-deploy.git"
+set :repo_url, "https://github.com/ManifoldScholar/manifold-docs.git"
 set :deploy_to, "/home/manifold_marketing/deploy-docs"
 
 set :keep_releases, 5
@@ -24,7 +24,7 @@ namespace :deploy do
   task :jekyll_build do
     on roles(:web), in: :sequence, wait: 5 do
       within release_path  do
-        execute "bin/jekyll", :build
+        execute :bundle, :exec, :jekyll, :build
       end
     end
   end
